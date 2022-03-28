@@ -1,0 +1,27 @@
+
+
+
+
+
+
+nav { 
+  display: flex;
+  justify-content: flex-start;
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #FFFFFF;
+};
+/* nav span #tweeterLogo {
+  font-family: 'Bungee', sans-serif;
+ } */
+ #newTweetNav {
+   display: flex;
+
+ }
+ #tweeterLogo {
+  display: flex;
+  font-family: 'Bungee', sans-serif;
+ }
+
