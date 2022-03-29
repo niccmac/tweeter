@@ -1,0 +1,27 @@
+  #tweet-text-button {
+    background-color: #4056A1;
+    border: none;
+    color: white;
+    padding: 4px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'Bungee', sans-serif;
+}
+
+#tweet-text-area {
+  font-family: inherit;
+  width: 60vw;
+  border: 0;
+  border-bottom: 2px solid #61656b;
+  outline: 0;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  top: -12px;
+}
+
+output.counter{
+  float: right;
+}

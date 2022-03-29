@@ -3,7 +3,7 @@
 const userHelper    = require("../lib/util/user-helper");
 
 const express       = require('express');
-const tweetsRoutes  = express.Router();
+const tweetsRoutes  = express.Router(); //breaks up where routes are defined into different files.
 
 module.exports = function(DataHelpers) {
 
