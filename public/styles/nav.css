@@ -6,22 +6,31 @@
 
 nav { 
   display: flex;
-  justify-content: flex-start;
+  padding: 1.5em;
   height: 120px;
+  justify-content: space-between;
   width: 100vw;
   background-color: #4056A1;
   font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
   color: #FFFFFF;
+  z-index: 9;
 };
-/* nav span #tweeterLogo {
-  font-family: 'Bungee', sans-serif;
- } */
- #newTweetNav {
-   display: flex;
 
+ #newTweetNav {   
+    /* padding: 1.5em; */
+    display: flex;
+   
+    
  }
+ 
  #tweeterLogo {
+  /* padding: 1.5em; */
   display: flex;
   font-family: 'Bungee', sans-serif;
  }
 
+ .fa-solid, .fas {
+   margin-left: 80px;
+   color: red;
+ }
