@@ -12,8 +12,7 @@ nav {
 };
 
  #newTweetNav {   
-    /* padding: 1.5em; */
-    display: flex;
+  display: flex;
  }
  
  #tweeterLogo {
@@ -23,7 +22,7 @@ nav {
  }
 
  /* Icon under Write a new tweet*/
-  .fas-user {
+  nav > .fa-solid {
    margin-left: 80px;
    color: red;
  }

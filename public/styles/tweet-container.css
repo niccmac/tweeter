@@ -5,7 +5,7 @@ article {
   box-shadow: 5px 10px moccasin;
   background-color: ivory;
 }
-article:hover {
+.classWithShadow {
   box-shadow: 5px 10px rgb(218, 163, 24);
   background-color: ivory;
 }
@@ -47,14 +47,9 @@ article:hover {
   width: 20%;
   color: #2156b8;
 }
-.flag-retweet-like-buttons > div > #flag:hover {
+.yellowButtonClass {
   color: rgb(218, 163, 24);
-}
-.flag-retweet-like-buttons > div > #rt:hover {
-  color: rgb(218, 163, 24);
-}
-.flag-retweet-like-buttons > div > #heart:hover {
-  color: rgb(218, 163, 24);
+
 }
 
 
