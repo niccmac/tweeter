@@ -1,32 +1,29 @@
 /* position, top and width essential to fixed nav bar */
-nav { 
+
+
+.navbar-top { 
   display: flex;
   padding: 1.5em;
   height: 120px;
   justify-content: space-between;
   width: 100%;
   background-color: #4056A1;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  color: #FFFFFF;
   z-index: 9;
   position: fixed;
   top: 0;
-};
+  color: #FFFFFF;
+}
 
-/* words write a new tweet */
- #newTweetNav {   
-  display: flex;
- }
- 
- /* words tweeter */
- #tweeterLogo {
-  display: flex;
-  font-family: 'Bungee', sans-serif;
- }
+.navbar-brand {
+  font-family:'Bungee', sans-serif;
+}
 
- /* Icon under Write a new tweet*/
-  nav > div > .fa-solid {
-   margin-left: 80px;
-   color: red;
- }
+.navbar-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-menu .fa-solid {
+  color: red;
+}

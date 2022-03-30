@@ -1,30 +1,41 @@
 article {
   margin: 10vh 0vh;
   padding: 4px 16px;
-  text-align: center;
+  align-content: center;
   box-shadow: 5px 10px moccasin;
   background-color: ivory;
 }
-.classWithShadow {
+
+article:hover{
   box-shadow: 5px 10px rgb(218, 163, 24);
-  background-color: ivory;
 }
+
 
 .top-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-}
-.top-row > a {
-  color: aliceblue;
-}
+  /* text-align: baseline; */
+  height: 4vh;
+  }
+
 .top-row > div {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
-  width: 25%;
+  height: 4vh;
+  margin: 0;
+  /* object-fit: contain; */
+}
+
+.top-row > a {
+  color: cornflowerblue;
+}
+.top-row > div > img {
+  /* align-items: baseline; */
+  width: 4vh;
+  height: 4vh;
 }
 
 .mid-row {
@@ -47,9 +58,10 @@ article {
   width: 20%;
   color: #2156b8;
 }
-.yellowButtonClass {
-  color: rgb(218, 163, 24);
 
+
+.flag-retweet-like-buttons i:hover {
+  color: rgb(218, 163, 24);
 }
 
 
