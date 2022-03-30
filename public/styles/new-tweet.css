@@ -12,14 +12,16 @@
 
 #tweet-text-area {
   font-family: inherit;
+  font-size: 20px;
   width: 60vw;
+  height: 10vw;
   border: 0;
   border-bottom: 2px solid #61656b;
   outline: 0;
   color: white;
   padding: 7px 0;
   background: transparent;
-  top: -12px;
+  top: -30px;
 }
 
 output.counter{
