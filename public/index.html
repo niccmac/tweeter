@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -62,10 +63,22 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-        <div id="posted-tweets">
-
-        </div>
       </section>
+      <div id="posted-tweets">
+        <article>
+          <div class="top-row">
+            <div><i class="fa-solid fa-user"></i><p>user.name</p></div>
+            <a href="">user.handle</a>
+          </div>
+          <div class="mid-row">
+            <p>tweet-text-area.val()</p>
+          </div>
+          <div class="flag-retweet-like-buttons">
+            <time>time now - time posted</time>
+            <div><i class="fa-solid fa-flag fa-2xs" id="flag"> </i><i class="fa-solid fa-retweet fa-2xs" id="rt"> </i><i class="fa-solid fa-heart fa-2xs" id="heart" > </i></div>
+          </div>
+        </article>
+      </div>
     </main>
     <footer>Nicole</footer>
   </body>

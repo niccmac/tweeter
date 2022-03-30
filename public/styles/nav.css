@@ -23,7 +23,7 @@ nav {
  }
 
  /* Icon under Write a new tweet*/
- .fa-solid, .fas {
+  .fas-user {
    margin-left: 80px;
    color: red;
  }
