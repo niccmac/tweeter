@@ -22,7 +22,7 @@ nav {
  }
 
  /* Icon under Write a new tweet*/
-  nav > .fa-solid {
+  nav > div > .fa-solid {
    margin-left: 80px;
    color: red;
  }
