@@ -28,6 +28,9 @@ main {
   margin: 0em 2em;
   background-color: #f4f1ec;
 }
+header {
+  margin-top: 120px;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
