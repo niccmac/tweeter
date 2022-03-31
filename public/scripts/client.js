@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(() => {
+$(() => {
   
 
   const tweetData = [
@@ -30,11 +30,12 @@ $(document).ready(() => {
       },
       "created_at": 1461113959088
     }
-  ]
+  ];
   
   const createTweetElement = function(tweet) {
     //Creating Markup?
     const ms = `${tweet.created_at}`;
+    // const tweetTimeAgo =
     const now = performance.now();
     
     const timeSinceTweet = function() {
@@ -90,6 +91,45 @@ $(document).ready(() => {
   };
   // renderTweets()
   renderTweets(tweetData);
+
+  //Form submittion
+  const getTweet = function() {
+    $.ajax({
+      type: "GET",
+      url: "/tweets",
+    }).then((data) => {
+      console.log("data", data);
+      renderTweets(data);
+    })
+  };
+
+
+
+  $(".tweet-submit-form").on("submit", function(event) {
+    event.preventDefault();
+    $('#submit-button').prop("disabled", true).text("Loading");
+    $.ajax({
+      type: "POST",
+      url: "/tweets",
+      data: $(".tweet-submit-form").serialize()
+    }).then((data) => {
+      $('#submit-button').prop("disabled", false).text("Submit");
+      getTweet();
+    })
+  });
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
 });
 
