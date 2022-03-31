@@ -5,6 +5,7 @@
  */
 
 $(() => {
+  $("#tweet-error").hide();
   const createTweetElement = function(tweet) {
     //Creating Markup
     const ms = `${tweet.created_at}`;
@@ -69,13 +70,16 @@ $(() => {
     
     if (checkTweet === "") {
       $("#tweet-error-message").text("Tweet must have a valid value.");
-      $("#tweet-error").show();
+      $("#tweet-error").slideDown();
       return;
     } else if (checkTweet === null) {
       $("tweet-error-message").text = "Tweet must have a valid value.";
+      $("#tweet-error").slideDown();
       return;
     } else if (checkTweet.length > 140) {
-      return alert("Your tweet needs to be a little shorter.");
+      $("#tweet-error-message").text("Your tweet needs to be a little shorter.");
+      $("#tweet-error").slideDown();
+      return;
     }
     // console.log("data in here needs to be checked", event);
     $.ajax({

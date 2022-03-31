@@ -34,7 +34,7 @@ output.counter{
 #tweet-error {
   display: flex;
   flex-direction: row;
-  visibility: hidden;
+  color: black
 }
 
 #tweet-error > p {
