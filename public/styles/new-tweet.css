@@ -30,3 +30,14 @@
 output.counter{
   float: right;
 }
+
+#tweet-error {
+  display: flex;
+  flex-direction: row;
+  visibility: hidden;
+}
+
+#tweet-error > p {
+  padding: 0;
+  margin: 0 10px;
+}

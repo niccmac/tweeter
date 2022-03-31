@@ -6,41 +6,26 @@
 
 $(() => {
   const createTweetElement = function(tweet) {
-    //Creating Markup?
+    //Creating Markup
     const ms = `${tweet.created_at}`;
-   
     const tweetTimeAgo = timeago.format(ms);
-    const now = performance.now();
-    
-    const timeSinceTweet = function() {
-      const days = parseInt((ms - now) / (1000 * 60 * 60 * 24));
-      const hours = parseInt((ms - now) / (1000 * 60 * 60) % 24);
-      const minutes = parseInt(Math.abs(ms - now) / (1000 * 60) % 60);
-      const seconds = parseInt(Math.abs(ms - now) / (1000) % 60);
-    
-      if (seconds < 59) {
-        return seconds + " seconds ago";
-      } else if (minutes < 59) {
-        return minutes + " minutes ago";
-      } else if (hours < 23) {
-        return hours + " hours ago";
-      } else {
-        return days + " days ago";
-      }
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
     };
-    const callTime = timeSinceTweet();
     const markup =
      `
       <article class="tweet">
         <div class="top-row">
           <div>
-            <img src="${tweet.user.avatars}" >
-            <p>${tweet.user.name}</p>
+            <img src="${escape(tweet.user.avatars)}" >
+            <p>${escape(tweet.user.name)}</p>
           </div>
-          <a href="/${tweet.user.handle}">${tweet.user.handle}</a>
+          <a href="/${escape(tweet.user.handle)}">${escape(tweet.user.handle)}</a>
         </div>
         <div class="mid-row">
-          <p>${tweet.content.text}</p>
+          <p>${escape(tweet.content.text)}</p>
         </div>
         <div class="flag-retweet-like-buttons">
           <time>${tweetTimeAgo}</time>
@@ -80,6 +65,19 @@ $(() => {
   $(".tweet-submit-form").on("submit", function(event) {
     event.preventDefault();
     $('#submit-button').prop("disabled", true).text("Loading");
+    const checkTweet = $('#tweet-text-area').val();
+    
+    if (checkTweet === "") {
+      $("#tweet-error-message").text("Tweet must have a valid value.");
+      $("#tweet-error").show();
+      return;
+    } else if (checkTweet === null) {
+      $("tweet-error-message").text = "Tweet must have a valid value.";
+      return;
+    } else if (checkTweet.length > 140) {
+      return alert("Your tweet needs to be a little shorter.");
+    }
+    // console.log("data in here needs to be checked", event);
     $.ajax({
       type: "POST",
       url: "/tweets",
@@ -87,7 +85,7 @@ $(() => {
     }).then((data) => {
       $('#submit-button').prop("disabled", false).text("Submit");
       loadTweets();
-    })
+    });
   });
 
   
