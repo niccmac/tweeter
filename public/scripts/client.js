@@ -5,37 +5,11 @@
  */
 
 $(() => {
-  
-
-  const tweetData = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116276273
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
-  
   const createTweetElement = function(tweet) {
     //Creating Markup?
     const ms = `${tweet.created_at}`;
-    // const tweetTimeAgo =
+   
+    const tweetTimeAgo = timeago.format(ms);
     const now = performance.now();
     
     const timeSinceTweet = function() {
@@ -69,7 +43,7 @@ $(() => {
           <p>${tweet.content.text}</p>
         </div>
         <div class="flag-retweet-like-buttons">
-          <time>${callTime}</time>
+          <time>${tweetTimeAgo}</time>
           <div>
             <i class="fa-solid fa-flag fa-2xs"></i>
             <i class="fa-solid fa-retweet fa-2xs"></i> 
@@ -89,11 +63,11 @@ $(() => {
       $('.posted-tweets').prepend(tweetElement);
     }
   };
-  // renderTweets()
-  renderTweets(tweetData);
+ 
+ 
 
   //Form submittion
-  const getTweet = function() {
+  const loadTweets = function() {
     $.ajax({
       type: "GET",
       url: "/tweets",
@@ -102,8 +76,6 @@ $(() => {
       renderTweets(data);
     })
   };
-
-
 
   $(".tweet-submit-form").on("submit", function(event) {
     event.preventDefault();
@@ -114,7 +86,7 @@ $(() => {
       data: $(".tweet-submit-form").serialize()
     }).then((data) => {
       $('#submit-button').prop("disabled", false).text("Submit");
-      getTweet();
+      loadTweets();
     })
   });
 
