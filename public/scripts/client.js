@@ -5,6 +5,7 @@
  */
 
 $(document).ready(() => {
+  
 
   const tweetData = [
     {
@@ -84,7 +85,7 @@ $(document).ready(() => {
   const renderTweets  = function(tweets) {
     for (const tweet of tweets) {
       const tweetElement = createTweetElement(tweet);
-      $('#posted-tweets').prepend(tweetElement);
+      $('.posted-tweets').prepend(tweetElement);
     }
   };
   // renderTweets()
