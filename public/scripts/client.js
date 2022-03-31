@@ -89,6 +89,8 @@ $(() => {
     }).then((data) => {
       $('#submit-button').prop("disabled", false).text("Submit");
       loadTweets();
+      const empty = "";
+      $('#tweet-text-area').val(empty);
     });
   });
 
