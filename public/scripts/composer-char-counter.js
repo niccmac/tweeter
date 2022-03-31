@@ -1,7 +1,7 @@
 $(document).ready(() => {
   jQuery === $;
 
-  const $tweetTextArea = $('#tweet-text-area');
+  const $tweetTextArea = $('#new-tweet-text-area');
   const $characterCounterOutput = $("output.counter");
   
   //Counts chatacters in tweet and displays

@@ -6,7 +6,7 @@
 
 $(() => {
   $("#tweet-error").hide();
-  const createTweetElement = function(tweet) {
+    const createTweetElement = function(tweet) {
     //Creating Markup
     const ms = `${tweet.created_at}`;
     const tweetTimeAgo = timeago.format(ms);
@@ -62,7 +62,7 @@ $(() => {
       renderTweets(data);
     })
   };
-
+  loadTweets();
   $(".tweet-submit-form").on("submit", function(event) {
     event.preventDefault();
     $('#submit-button').prop("disabled", true).text("Loading");

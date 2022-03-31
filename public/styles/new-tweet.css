@@ -1,9 +1,10 @@
-.tweet-submit-form {
+.new-tweet {
   margin: 5vh 0;
 }
 
-.tweet-text{
+.tweet-text-footer{
   font-family: 'Bungee', sans-serif;
+  padding: 1vh;
 }
 
 #tweet-text-button {
@@ -17,11 +18,11 @@
   font-size: 24px;
 }
 
-#tweet-text-area {
+#new-tweet-text-area {
   font-family: inherit;
-  font-size: 20px;
-  width: 60vw;
-  height: 10vw;
+  font-size: 18px;
+  width: 100%;
+  height: 6vw;
   border: 0;
   border-bottom: 2px solid #61656b;
   outline: 0;
@@ -29,6 +30,9 @@
   padding: 7px 0;
   background: transparent;
   top: -30px;
+}
+#new-tweet-text-area::placeholder {
+  font-size: 24px;
 }
 
 output.counter{
@@ -38,7 +42,8 @@ output.counter{
 #tweet-error {
   display: flex;
   flex-direction: row;
-  color: black
+  color: black;
+  justify-content: center;
 }
 
 #tweet-error > p {

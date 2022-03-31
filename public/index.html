@@ -47,13 +47,14 @@
     </header>
 
     <!-- Page-specific (main) content here -->
+
     <main class="container">
+
+      <!--New Tweet Area-->
       <section class="new-tweet">
        <form class="tweet-submit-form" method="POST" action="/tweets">
-          <label for="tweet-text" >What are you humming about?</label>
-          <br>
-          <textarea name="text" id="tweet-text-area"></textarea>
-          <div class ="tweet-text">
+          <textarea name="text" id="new-tweet-text-area" placeholder="What are you humming about?"></textarea>
+          <div class ="tweet-text-footer">
             <button id="tweet-text-button"type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
@@ -63,11 +64,15 @@
           </div>
         </form>
       </section>
+
+      <!--Posted Tweets Area-->
       <div class="posted-tweets">
         <!-- CLIENT.JS function render Tweets prepens here-->
       </div>
+
     </main>
     <footer></footer>
+    
         <!-- External JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <!-- Library timeago.js -->
@@ -75,5 +80,6 @@
         <!-- App JS -->
         <script type="text/javascript" src="/scripts/client.js"></script>
         <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </body>
 </html>
