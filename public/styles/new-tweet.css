@@ -26,7 +26,7 @@
   border: 0;
   border-bottom: 2px solid #61656b;
   outline: 0;
-  color: white;
+  color: #545149;
   padding: 7px 0;
   background: transparent;
   top: -30px;
@@ -50,3 +50,9 @@ output.counter{
   padding: 0;
   margin: 0 10px;
 }
+
+/* @media (min-width: 1024px) {
+  .new-tweet {
+    top: 140px;
+  }
+} */

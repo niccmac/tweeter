@@ -17,14 +17,14 @@ $(() => {
     };
     const markup =
      `
-      <article class="tweet">
-        <div class="top-row">
+      <article class="posted-tweet">
+        <header class="posted-tweet-header">
           <div>
             <img src="${escape(tweet.user.avatars)}" >
             <p>${escape(tweet.user.name)}</p>
           </div>
           <a href="/${escape(tweet.user.handle)}">${escape(tweet.user.handle)}</a>
-        </div>
+        </header>
         <div class="mid-row">
           <p>${escape(tweet.content.text)}</p>
         </div>

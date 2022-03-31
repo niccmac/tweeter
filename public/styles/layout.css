@@ -5,7 +5,6 @@
  */
 html {
   box-sizing: border-box;
-  width: fit-content;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -18,18 +17,17 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   color: #545149;
   font-size: 24px;
   background-color: #f4f1ec;
-  width: fit-content;
+
 }
 main {
   margin: 0em 2em;
   background-color: #f4f1ec;
-  width: fit-content;
 }
 
 
@@ -37,3 +35,17 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ @media (min-width: 1024px) {
+   
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 140px;
+    margin-left: 7%;
+  }
+}

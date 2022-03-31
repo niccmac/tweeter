@@ -1,4 +1,4 @@
-article {
+.posted-tweet {
   margin: 10vh 0vh;
   padding: 4px 16px;
   align-content: center;
@@ -11,7 +11,7 @@ article:hover{
 }
 
 
-.top-row {
+.posted-tweet-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -19,23 +19,28 @@ article:hover{
   height: 4vh;
   }
 
-.top-row > div {
+.posted-tweet-header > div {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items:flex-start;
   height: 4vh;
+  width: 35%;
   margin: 0;
   /* object-fit: contain; */
 }
 
-.top-row > a {
+.posted-tweet-header > a {
   color: cornflowerblue;
+  margin: 1vh;
 }
-.top-row > div > img {
-  /* align-items: baseline; */
+.posted-tweet-header > div > img {
   width: 4vh;
   height: 4vh;
+}
+
+.posted-tweet-header p {
+  margin-top: 1vh;
+  margin-left: 1vh;
 }
 
 .mid-row {
@@ -64,4 +69,8 @@ article:hover{
   color: rgb(218, 163, 24);
 }
 
-
+/* @media (min-width: 1024px) {
+  .posted-tweet {
+    width: 60%;
+  }
+} */
