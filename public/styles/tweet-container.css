@@ -43,7 +43,7 @@ article:hover{
   margin-left: 1vh;
 }
 
-.mid-row {
+.posted-tweet-content {
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -62,6 +62,7 @@ article:hover{
   justify-content: space-between;
   width: 20%;
   color: #2156b8;
+  cursor: pointer;
 }
 
 

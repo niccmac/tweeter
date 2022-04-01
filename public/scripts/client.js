@@ -5,9 +5,12 @@
  */
 
 $(() => {
+
+  //Hides error message on first request
   $("#tweet-error").hide();
-    const createTweetElement = function(tweet) {
-    //Creating Markup
+
+  //Creates new tweet markup
+  const createTweetElement = function(tweet) {
     const ms = `${tweet.created_at}`;
     const tweetTimeAgo = timeago.format(ms);
     const escape = function (str) {
@@ -16,8 +19,8 @@ $(() => {
       return div.innerHTML;
     };
     const markup =
-     `
-      <article class="posted-tweet">
+     `<article class="posted-tweet">
+
         <header class="posted-tweet-header">
           <div>
             <img src="${escape(tweet.user.avatars)}" >
@@ -25,9 +28,11 @@ $(() => {
           </div>
           <a href="/${escape(tweet.user.handle)}">${escape(tweet.user.handle)}</a>
         </header>
-        <div class="mid-row">
+
+        <div class="posted-tweet-content">
           <p>${escape(tweet.content.text)}</p>
         </div>
+
         <div class="flag-retweet-like-buttons">
           <time>${tweetTimeAgo}</time>
           <div>
@@ -41,8 +46,7 @@ $(() => {
     return markup;
   };
   
-  
-
+  //Renders all tweets in "DB" to main page
   const renderTweets  = function(tweets) {
     for (const tweet of tweets) {
       const tweetElement = createTweetElement(tweet);
@@ -50,19 +54,20 @@ $(() => {
     }
   };
  
- 
-
   //Form submittion
   const loadTweets = function() {
     $.ajax({
       type: "GET",
       url: "/tweets",
     }).then((data) => {
-      console.log("data", data);
       renderTweets(data);
     })
   };
+
+  //Renders current tweets in "DB" on first request
   loadTweets();
+
+  //Updates posted tweets on new tweet submit
   $(".tweet-submit-form").on("submit", function(event) {
     event.preventDefault();
     $('#submit-button').prop("disabled", true).text("Loading");
@@ -81,31 +86,16 @@ $(() => {
       $("#tweet-error").slideDown();
       return;
     }
-    // console.log("data in here needs to be checked", event);
     $.ajax({
       type: "POST",
       url: "/tweets",
       data: $(".tweet-submit-form").serialize()
     }).then((data) => {
       $('#submit-button').prop("disabled", false).text("Submit");
-      loadTweets();
       const empty = "";
-      $('#tweet-text-area').val(empty);
+      $('#new-tweet-text-area').val(empty);
+      loadTweets();
     });
   });
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
 });
 

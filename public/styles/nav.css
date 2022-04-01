@@ -23,7 +23,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .navbar-menu .fa-solid {
   color: red;
 }
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+.navbar-menu .fa-solid:hover {
+  animation-name: bounce;
+  animation-duration: .75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
