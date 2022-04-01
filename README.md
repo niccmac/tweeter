@@ -24,4 +24,4 @@ This repository is the starter code for the project: Students will fork and clon
  ## Screenshots
 
  ![Homepage](https://github.com/niccmac/tweeter/blob/master/docs/Screen%20Shot%202022-04-01%20at%209.22.42%20AM.png)
-
+ ![HomepageSmallDevice](https://github.com/niccmac/tweeter/blob/master/docs/Screen%20Shot%202022-04-01%20at%209.30.11%20AM.png)
