@@ -10,14 +10,12 @@ article:hover{
   box-shadow: 5px 10px rgb(218, 163, 24);
 }
 
-
 .posted-tweet-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* text-align: baseline; */
   height: 4vh;
-  }
+}
 
 .posted-tweet-header > div {
   display: flex;
@@ -26,13 +24,13 @@ article:hover{
   height: 4vh;
   width: 35%;
   margin: 0;
-  /* object-fit: contain; */
 }
 
 .posted-tweet-header > a {
   color: cornflowerblue;
   margin: 1vh;
 }
+
 .posted-tweet-header > div > img {
   width: 4vh;
   height: 4vh;
@@ -48,7 +46,6 @@ article:hover{
   flex-direction: row;
   align-items: baseline;
   border-bottom: 5px #2156b8 solid;
- 
 }
 
 .flag-retweet-like-buttons {
@@ -57,6 +54,7 @@ article:hover{
   justify-content: space-between;
   align-items: center;
 }
+
 .flag-retweet-like-buttons > div {
   display: flex;
   justify-content: space-between;
@@ -65,13 +63,6 @@ article:hover{
   cursor: pointer;
 }
 
-
 .flag-retweet-like-buttons i:hover {
   color: rgb(218, 163, 24);
 }
-
-/* @media (min-width: 1024px) {
-  .posted-tweet {
-    width: 60%;
-  }
-} */

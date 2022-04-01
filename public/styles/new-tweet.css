@@ -51,9 +51,3 @@ output.counter{
   padding: 0;
   margin: 0 10px;
 }
-
-/* @media (min-width: 1024px) {
-  .new-tweet {
-    top: 140px;
-  }
-} */
