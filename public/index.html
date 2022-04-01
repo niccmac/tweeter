@@ -32,10 +32,9 @@
       <div class="navbar-menu" >
         <span><strong>Write</strong> a new tweet</span> 
         <i class="fa-solid fa-angles-down"></i>
-        <!-- <button name="navbar-menu" type="button"></button> -->
       </div>
     </nav>
-<!-- <div> -->
+
     <!-- Header -->
     <header class="header">
       <div class="header-pic">
@@ -53,24 +52,28 @@
       <!--New Tweet Area-->
       <section class="new-tweet">
        <form class="tweet-submit-form" method="POST" action="/tweets">
+          
           <textarea name="text" id="new-tweet-text-area" placeholder="What are you humming about?"></textarea>
+          
           <div class ="tweet-text-footer">
             <button id="tweet-text-button"type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
+         
           <div id="tweet-error">
             <i class="fa-solid fa-triangle-exclamation"></i>
             <p id="tweet-error-message"></p>
           </div>
+
         </form>
       </section>
+      
       <!--Posted Tweets Area-->
       <div class="posted-tweets">
         <!-- CLIENT.JS function render Tweets prepens here-->
       </div>
       
     </main>
-<!-- </div> -->
     <footer></footer>
     
     <!-- External JS -->
