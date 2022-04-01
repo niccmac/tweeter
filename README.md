@@ -21,4 +21,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Md5 2.1.0
 - Timeago.js 4.0.2
 
+ ## Screenshots
+
+ ![Homepage](https://github.com/niccmac/tweeter/blob/master/docs/Screen%20Shot%202022-04-01%20at%209.22.42%20AM.png)
 
