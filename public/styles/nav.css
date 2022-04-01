@@ -1,16 +1,14 @@
 /* position, top and width essential to fixed nav bar */
-
-
 .navbar-top { 
   display: flex;
   padding: 1.5em;
   height: 120px;
   justify-content: space-between;
-  width: 100%;
+  width: 100%; /**/
   background-color: #4056A1;
   z-index: 9;
-  position: fixed;
-  top: 0;
+  position: fixed; /**/
+  top: 0; /**/
   color: #FFFFFF;
 }
 
@@ -28,6 +26,7 @@
 .navbar-menu .fa-solid {
   color: red;
 }
+/*makes icon bounce when you hover over TODO*/
 @keyframes bounce {
   0%   { transform: translateY(0); }
   50%  { transform: translateY(-5px); }
