@@ -10,17 +10,15 @@
   color: #545149;
   background-color: #4287f5;
   background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
-  margin-top: 120px; 
-  /* margin-top essential to nav bar fixed */
+  margin-top: 120px; /* margin-top essential to nav bar fixed */
 }
 
 @media (min-width: 1024px) {
   .header {
     display: flex;
-    margin-top: 170px;
+    margin-top: 170px; /*used px here to ensure nav bar never covers header*/
     margin-left: 10vh;
     height: 50vh;
     width: 30%;
-
   }
 }
