@@ -38,6 +38,7 @@
 
 output.counter{
   float: right;
+  color: 61656b;
 }
 
 #tweet-error {

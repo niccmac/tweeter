@@ -13,6 +13,7 @@ $(() => {
   const createTweetElement = function(tweet) {
     const ms = `${tweet.created_at}`;
     const tweetTimeAgo = timeago.format(ms);
+   
     const escape = function (str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
@@ -48,6 +49,7 @@ $(() => {
   
   //Renders all tweets in "DB" to main page
   const renderTweets  = function(tweets) {
+   
     for (const tweet of tweets) {
       const tweetElement = createTweetElement(tweet);
       $('.posted-tweets').prepend(tweetElement);
@@ -56,6 +58,7 @@ $(() => {
  
   //Form submittion
   const loadTweets = function() {
+   
     $.ajax({
       type: "GET",
       url: "/tweets",
@@ -78,22 +81,25 @@ $(() => {
       $("#tweet-error-message").text("Tweet must have a valid value.");
       $("#tweet-error").slideDown();
       return;
+   
     } else if (checkTweet === null) {
       $("tweet-error-message").text = "Tweet must have a valid value.";
       $("#tweet-error").slideDown();
       return;
+    
     } else if (checkTweet.length > 140) {
       $("#tweet-error-message").text("Your tweet needs to be a little shorter.");
       $("#tweet-error").slideDown();
       return;
     }
+
     $.ajax({
       type: "POST",
       url: "/tweets",
-      data: $(".tweet-submit-form").serialize()
-      
+      data: $(".tweet-submit-form").serialize() 
     }).then((data) => {
       $('#submit-button').prop("disabled", false).text("Submit");
+      
       const empty = "";
       $('#new-tweet-text-area').val(empty);
       loadTweets();
