@@ -8,8 +8,9 @@ $(document).ready(() => {
     $characterCounterOutput.val(140 - $(this).val().length);
     if ((140 - $(this).val().length) < 0) {
       $characterCounterOutput.css("color","#bd1125");
-      $("#tweet-error-message").text("Your tweet needs to be a little shorter.");
-      $("#tweet-error").show();
+      //This shows error message as you write tweet, will impliment after project complete.
+      // $("#tweet-error-message").text("Your tweet needs to be a little shorter.");
+      // $("#tweet-error").show();
     } else {
       $characterCounterOutput.css("color","white");
       $("#tweet-error").hide();

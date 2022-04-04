@@ -73,7 +73,7 @@ $(() => {
     $('#submit-button').prop("disabled", true).text("Loading");
     const checkTweet = $('#new-tweet-text-area').val();
     
-    if (checkTweet === " ") {
+    if (checkTweet === "") {
       $("#tweet-error-message").text("Tweet must have a valid value.");
       $("#tweet-error").slideDown();
       return;
