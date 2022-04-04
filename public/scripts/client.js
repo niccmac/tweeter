@@ -63,7 +63,7 @@ $(() => {
       type: "GET",
       url: "/tweets",
     }).then((data) => {
-      $(".posted-tweets").html("");
+      $(".posted-tweets").html(""); //Empties HTML div before rendering data
       renderTweets(data);
     });
   };
@@ -73,10 +73,11 @@ $(() => {
 
   //Updates posted tweets on new tweet submit
   $(".tweet-submit-form").on("submit", function(event) {
-    event.preventDefault();
+    event.preventDefault(); //prevents page refreshing
     $('#submit-button').prop("disabled", true).text("Loading");
     const checkTweet = $('#new-tweet-text-area').val();
     
+    //Checks tweets are vaild length/content - error message if not
     if (checkTweet === "") {
       $("#tweet-error-message").text("Tweet must have a valid value.");
       $("#tweet-error").slideDown();
@@ -93,13 +94,13 @@ $(() => {
       return;
     }
 
+    //post tweets to database, then renders them in window no refresh
     $.ajax({
       type: "POST",
       url: "/tweets",
       data: $(".tweet-submit-form").serialize() 
     }).then((data) => {
       $('#submit-button').prop("disabled", false).text("Submit");
-      
       const empty = "";
       $('#new-tweet-text-area').val(empty);
       loadTweets();
