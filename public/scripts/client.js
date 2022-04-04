@@ -60,8 +60,9 @@ $(() => {
       type: "GET",
       url: "/tweets",
     }).then((data) => {
+      $(".posted-tweets").html("");
       renderTweets(data);
-    })
+    });
   };
 
   //Renders current tweets in "DB" on first request
@@ -90,6 +91,7 @@ $(() => {
       type: "POST",
       url: "/tweets",
       data: $(".tweet-submit-form").serialize()
+      
     }).then((data) => {
       $('#submit-button').prop("disabled", false).text("Submit");
       const empty = "";
