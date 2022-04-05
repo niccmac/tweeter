@@ -103,6 +103,7 @@ $(() => {
       $('#submit-button').prop("disabled", false).text("Submit");
       const empty = "";
       $('#new-tweet-text-area').val(empty);
+      $("output.counter").val("140");
       loadTweets();
     });
   });
